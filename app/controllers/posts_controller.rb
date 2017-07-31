@@ -11,9 +11,9 @@ def index
 
   # create
   def create
-    @post = Post.create!(post_params)
+    @post = Post.create(post_params)
 
-    redirect_to "/posts/#{@post.id}"
+    redirect_to post_path(@post)
   end
 
   #show
